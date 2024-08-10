@@ -1,0 +1,312 @@
+/* General styles */
+h2 {
+  color: #313131;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+
+h6 {
+  color: greenyellow;
+}
+
+.app {
+  margin: auto;
+  padding-top: 40px;
+  max-width: 950px; /* Set maximum width */
+  width: 100%; /* Ensure full width */
+  text-align: center;
+}
+
+.app img {
+  border-radius: 100%;
+  height: 10vh;
+}
+
+/* Chat styles */
+.chat {
+  display: grid;
+}
+
+.leave-room {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.user-list {
+  float: left;
+  background-color: #eedd8c;
+  color: rgb(6, 6, 6);
+  width: 200px;
+  height: 440px;
+  font-family: cursive;
+  padding-top: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+.message-container {
+  height: 300px; /* Reduced height for smaller screens */
+  background-color: white;
+  overflow-y: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.user-message {
+  text-align: right;
+  padding-right: 5px;
+  font-size: 18px;
+}
+
+.message {
+  display: inline-flex;
+  /* margin: 0 auto 0px auto; */
+   /* Center messages horizontally and add margin at the bottom */
+  padding: 10px;
+  /* background-color: rgb(176, 218, 203); */
+  background-image: linear-gradient(90deg, rgb(243, 176, 7), rgb(237, 230, 95),rgb(247, 243, 183));
+  font-size: 15px;
+  color: rgb(7, 7, 7);
+  border-radius: 20px;
+  max-width: 80%; /* Adjust message width */
+  word-wrap: break-word;
+  font-family: cursive;
+}
+
+.from-user {
+  font-size: small;
+  margin-bottom: 3px;
+  margin-right: 5px;
+}
+
+.message-container {
+  overflow-y: auto;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-message {
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 5px;
+  max-width: 60%;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-message.left {
+  align-self: flex-start;
+  text-align: left;
+  border-top-left-radius: 0px;
+}
+
+.user-message.right {
+  align-self: flex-end;
+  text-align: right;
+  border-top-right-radius: 0px;
+}
+
+.input-group-custom {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.message-input {
+  flex: 1;
+  border-radius: 8px 0 0 8px;
+}
+
+.send-button {
+  flex: 0 0 100px; /* Fixed width for button */
+  max-width: 20%; /* Ensure button doesn't stretch too much */
+  border-radius: 0 8px 8px 0;
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+/* Lobby styles */
+
+/* Lobby styles */
+
+.lobby-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.lobby {
+  width: 100%;
+  max-width: 500px; 
+  margin-top: 10%;
+  padding: 30px; 
+  background-color: #fff;
+  border: 6px solid transparent; 
+  border-image: linear-gradient(to right, #ed16a6, #efa5f0, #fbaf22) 1; 
+  border-radius: 25px; 
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.549);
+  font-family: cursive;
+}
+
+.lobby-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px; 
+  font-weight: bold;
+  color: #dd6520;
+}
+
+.lobby-input {
+  margin-bottom: 15px; 
+}
+
+
+/* html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+} */
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 30s linear infinite;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 2;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #090909;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app {
+    padding-top: 20px;
+  }
+
+  .user-list {
+    width: 100%; /* Full width for smaller screens */
+    max-width: none; /* Remove max-width */
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .message-container {
+    height: 200px; /* Reduced height for smaller screens */
+  }
+
+  .input-group-custom {
+    margin-bottom: 5px;
+  }
+
+  .send-button {
+    max-width: 30%; /* Adjust button width */
+  }
+
+  .lobby {
+    margin-top: 5%;
+    padding: 15px;
+  }
+}
+
+/* Additional media queries for different screen sizes */
+@media (max-width: 576px) {
+  .user-list {
+    height: 300px; /* Adjust user list height for smaller screens */
+  }
+
+  .message-container {
+    height: 150px; /* Further reduce message container height for very small screens */
+  }
+
+  .send-button {
+    max-width: 40%; /* Adjust button width for very small screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .lobby {
+    margin-top: 10%;
+  }
+}
+@media (max-width: 775px) {
+  .user-list {
+    width: 30%; /* Adjust user list width */
+    max-width: none; /* Remove max-width */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 200px; /* Adjust user list height */
+  }
+
+  .message-container {
+    height: 250px; /* Adjust message container height */
+  }
+
+  .input-group-custom {
+    margin-bottom: 5px;
+  }
+
+  .send-button {
+    max-width: 25%; /* Adjust button width */
+  }
+}
