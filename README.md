@@ -1,1 +1,2 @@
 # WeChatApp
+Welcome to our real-time web chat application built using React.js for the frontend and ASP.NET Core with SignalR for the backend. This project aims to facilitate instant communication between users through text messages, utilizing modern web technologies to ensure reliability, scalability, and responsiveness. With features like dynamic message updates, our application enhances user interaction, making it ideal for diverse communication needs. Explore the repository to dive into the code and deploy your own instance for seamless online chatting.
